@@ -1,11 +1,11 @@
 package org.domain.models.userRoles;
 
 import org.domain.models.DomainAccountModel;
-import org.domain.models.userRoles.accountInformation.SignUpInformation;
+import org.domain.models.userRoles.accountInformation.DomainUserInfo;
 
 public class DomainAdminModel extends DomainAccountModel {
 
-    public DomainAdminModel(SignUpInformation signUpInformation, int id) {
-        super(signUpInformation, id);
+    public DomainAdminModel(DomainUserInfo domainUserInfo, int id) {
+        super(domainUserInfo, id);
     }
 }

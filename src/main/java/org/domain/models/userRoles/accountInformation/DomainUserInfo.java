@@ -10,7 +10,7 @@ import org.joda.time.DateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(includeFieldNames = false)
-public class SignUpInformation {
+public class DomainUserInfo {
     private String firstName;
     private String lastName;
     private DateTime dateOfBirth;

@@ -4,14 +4,14 @@ import org.domain.models.userRoles.DomainStudentModel;
 import org.domain.models.userRoles.DomainTutorModel;
 import org.domain.models.userRoles.accountInformation.Gender;
 import org.domain.models.userRoles.accountInformation.LoginInformation;
-import org.domain.models.userRoles.accountInformation.SignUpInformation;
+import org.domain.models.userRoles.accountInformation.DomainUserInfo;
 import org.domain.models.userRoles.supportClasses.address.Address;
 import org.joda.time.DateTime;
 
 public class UserFactory {
 
     public DomainTutorModel getTutor() {
-        return new DomainTutorModel(SignUpInformation.builder()
+        return new DomainTutorModel(DomainUserInfo.builder()
                 .loginInformation(LoginInformation.builder()
                         .emailAddress("ha@gmail.com")
                         .password("123")
@@ -33,7 +33,7 @@ public class UserFactory {
     }
 
     public DomainStudentModel getStudent() {
-        return new DomainStudentModel(SignUpInformation.builder().loginInformation(LoginInformation.builder()
+        return new DomainStudentModel(DomainUserInfo.builder().loginInformation(LoginInformation.builder()
                         .emailAddress("ah@gmail.com")
                         .password("321")
                         .build())

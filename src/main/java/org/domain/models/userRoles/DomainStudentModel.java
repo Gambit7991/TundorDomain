@@ -3,7 +3,7 @@ package org.domain.models.userRoles;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.domain.models.DomainUserModel;
-import org.domain.models.userRoles.accountInformation.SignUpInformation;
+import org.domain.models.userRoles.accountInformation.DomainUserInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +12,8 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = false)
 public class DomainStudentModel extends DomainUserModel {
     private final List <DomainTutorModel> domainTutorModels = new ArrayList<>();
-    public DomainStudentModel(SignUpInformation signUpInformation, int id) {
-        super(signUpInformation, id);
+    public DomainStudentModel(DomainUserInfo domainUserInfo, int id) {
+        super(domainUserInfo, id);
     }
 
     public void addTutor(DomainTutorModel domainTutorModel) {
