@@ -6,26 +6,19 @@ import lombok.Setter;
 import lombok.ToString;
 import org.domain.models.userRoles.accountInformation.DomainUserInfo;
 
-import java.util.ArrayList;
+import java.util.UUID;
 
 @Getter
 @Setter
 @ToString(includeFieldNames = false)
 @EqualsAndHashCode
 public abstract class DomainAccountModel {
-    private final DomainUserInfo domainUserInfo;
-    private final int id;
-    private String mainPicture;
-    private ArrayList<String> pictures;
+    private final UUID id;
+    private final DomainUserInfo info;
 
-    public DomainAccountModel(DomainUserInfo domainUserInfo, int id) {
-        this.domainUserInfo = domainUserInfo;
+    public DomainAccountModel(DomainUserInfo info, UUID id) {
+        this.info = info;
         this.id = id;
     }
-
-    public DomainUserInfo getDomainUserInfo(){
-        return this.domainUserInfo;
-    }
-
 
 }

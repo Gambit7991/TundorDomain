@@ -4,21 +4,14 @@ import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
+@NoArgsConstructor @AllArgsConstructor
 @Builder
 @ToString(includeFieldNames = false)
 public class Address {
-    private String apartmentNumber;
-    private String buildingNumber;
-    private String streetName;
+    private Integer aptNum;
+    private Integer buildingNumber;
+    private String street;
     private String city;
-    private String country;
-
-    public Address(String apartmentNumber, String buildingNumber, String streetName, String city, String country) {
-        this.apartmentNumber = apartmentNumber;
-        this.buildingNumber = buildingNumber;
-        this.streetName = streetName;
-        this.city = city;
-        this.country = country;
-    }
+    private Integer countryId;
+    private Integer postalCode;
 }

@@ -5,11 +5,13 @@ import lombok.Getter;
 import org.domain.models.DomainUserModel;
 import org.domain.models.userRoles.accountInformation.DomainUserInfo;
 
+import java.util.UUID;
+
 @Getter
 @EqualsAndHashCode(callSuper = false)
 public class DomainStudentModel extends DomainUserModel {
 //    private final List <DomainTutorModel> domainTutorModels = new ArrayList<>();
-    public DomainStudentModel(DomainUserInfo domainUserInfo, int id) {
+    public DomainStudentModel(DomainUserInfo domainUserInfo, UUID id) {
         super(domainUserInfo, id);
     }
 
