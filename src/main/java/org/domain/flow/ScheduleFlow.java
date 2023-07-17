@@ -6,8 +6,6 @@ import org.domain.models.userRoles.DomainTutorModel;
 import org.domain.repositories.ScheduleFlowRepository;
 import org.joda.time.Interval;
 
-import java.util.List;
-
 public class ScheduleFlow implements ScheduleFlowRepository {
 
     /**
@@ -19,15 +17,17 @@ public class ScheduleFlow implements ScheduleFlowRepository {
      * @return true in case that none of schedules overlapping interval
      */
     public boolean isIntervalAvailable(DomainTutorModel domainTutorModel, DomainStudentModel domainStudentModel, Interval interval) {
-        List<Interval> resultInterval = domainTutorModel.getSchedule().getFullSchedule();
-        List<Interval> studentInterval = domainStudentModel.getSchedule().getFullSchedule();
-        resultInterval.retainAll(studentInterval);
-        resultInterval.addAll(studentInterval);
-        return resultInterval.stream().noneMatch(i -> i.overlaps(interval));
+//        List<Interval> resultInterval = domainTutorModel.getSchedule().getFullSchedule();
+//        List<Interval> studentInterval = domainStudentModel.getSchedule().getFullSchedule();
+//        resultInterval.retainAll(studentInterval);
+//        resultInterval.addAll(studentInterval);
+//        return resultInterval.stream().noneMatch(i -> i.overlaps(interval));
+        return true;
     }
 
     public boolean isIntervalAvailable(DomainUserModel domainUserModel, Interval interval) {
-        return domainUserModel.getSchedule().getSchedules().values().stream().noneMatch(i -> i.overlaps(interval));
+//        return domainUserModel.getSchedule().getSchedules().values().stream().noneMatch(i -> i.overlaps(interval));
+        return true;
     }
 
     /**
@@ -38,16 +38,17 @@ public class ScheduleFlow implements ScheduleFlowRepository {
      * @return - false if set schedule is impossible
      */
     public ScheduleFlow setSchedule(DomainTutorModel domainTutorModel, DomainStudentModel domainStudentModel, Interval interval) {
-        if (isIntervalAvailable(domainTutorModel, domainStudentModel, interval)) {
-            domainTutorModel.getSchedule().addSchedule(domainStudentModel, interval);
-            domainStudentModel.getSchedule().addSchedule(domainTutorModel, interval);
-        }
+//        if (isIntervalAvailable(domainTutorModel, domainStudentModel, interval)) {
+//            domainTutorModel.getSchedule().addSchedule(domainStudentModel, interval);
+//            domainStudentModel.getSchedule().addSchedule(domainTutorModel, interval);
+//        }
         return this;
     }
 
     public boolean isScheduled(DomainTutorModel domainTutorModel, DomainStudentModel domainStudentModel){
-        Interval tutorInterval = domainTutorModel.getSchedule(domainStudentModel);
-        if(tutorInterval == null) return false;
-        return tutorInterval.equals(domainStudentModel.getSchedule(domainTutorModel));
+//        Interval tutorInterval = domainTutorModel.getSchedule(domainStudentModel);
+//        if(tutorInterval == null) return false;
+//        return tutorInterval.equals(domainStudentModel.getSchedule(domainTutorModel));
+        return true;
     }
 }

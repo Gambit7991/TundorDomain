@@ -32,7 +32,7 @@ public class UserFactory {
                 .createdTime(new Timestamp(DateTime.now().getMillis()))
                 .birthday(new Timestamp(new DateTime(1988, 5, 30, 0, 0, 0).getMillis()))
                 .build(),
-                0);
+                UUID.randomUUID());
     }
 
     public DomainStudentModel getStudent() {

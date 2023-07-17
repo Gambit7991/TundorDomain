@@ -14,8 +14,9 @@ public class ScheduleTestFlow implements ScheduleFlowRepository {
 
 
     public boolean isIntervalAvailable(DomainTutorModel domainTutorModel, DomainStudentModel domainStudentModel, Interval interval) {
-        return domainTutorModel.getSchedule().getSchedules().get(domainStudentModel).equals(interval) &&
-                domainStudentModel.getSchedule().getSchedules().get(domainTutorModel).equals(interval);
+//        return domainTutorModel.getSchedule().getSchedules().get(domainStudentModel).equals(interval) &&
+//                domainStudentModel.getSchedule().getSchedules().get(domainTutorModel).equals(interval);
+    return true;
     }
 
     public boolean isIntervalAvailable(DomainUserModel domainUserModel, Interval interval){

@@ -7,13 +7,14 @@ import org.domain.models.userRoles.accountInformation.DomainUserInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @EqualsAndHashCode(callSuper = false)
 public class DomainTutorModel extends DomainUserModel {
     private final List<DomainStudentModel> domainStudentModels = new ArrayList<>();
 
-    public DomainTutorModel(DomainUserInfo domainUserInfo, int id) {
+    public DomainTutorModel(DomainUserInfo domainUserInfo, UUID id) {
         super(domainUserInfo, id);
     }
 
@@ -25,9 +26,9 @@ public class DomainTutorModel extends DomainUserModel {
         domainStudentModels.remove(domainStudentModel);
     }
 
-    public DomainStudentModel getStudentById(int id) {
-        return domainStudentModels.stream().filter(i-> i.getId() == id).toList().get(0);
-    }
+//    public DomainStudentModel getStudentById(int id) {
+//        return domainStudentModels.stream().filter(i-> i.getId() == id).toList().get(0);
+//    }
 
     public String customToString(){
         return super.toString();
