@@ -10,6 +10,6 @@ import lombok.*;
 @ToString(includeFieldNames = false)
 public class LoginInformation {
     private int id;
-    private String emailAddress;
+    private String email;
     private String password;
 }
