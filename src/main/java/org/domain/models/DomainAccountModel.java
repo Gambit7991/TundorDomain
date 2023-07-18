@@ -13,8 +13,8 @@ import java.util.UUID;
 @ToString(includeFieldNames = false)
 @EqualsAndHashCode
 public abstract class DomainAccountModel {
-    private final UUID id;
-    private final DomainUserInfo info;
+    private UUID id;
+    private DomainUserInfo info;
 
     public DomainAccountModel(DomainUserInfo info, UUID id) {
         this.info = info;
