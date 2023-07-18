@@ -9,6 +9,7 @@ import lombok.*;
 @Builder
 @ToString(includeFieldNames = false)
 public class LoginInformation {
+    private int id;
     private String emailAddress;
     private String password;
 }
