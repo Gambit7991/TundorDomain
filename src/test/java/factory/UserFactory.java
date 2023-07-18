@@ -16,7 +16,7 @@ public class UserFactory {
     public DomainTutorModel getTutor() {
         return new DomainTutorModel(DomainUserInfo.builder()
                 .loginInfo(LoginInformation.builder()
-                        .emailAddress("ha@gmail.com")
+                        .email("ha@gmail.com")
                         .password("123")
                         .build())
                 .sex(Gender.WOMAN)
@@ -37,7 +37,7 @@ public class UserFactory {
 
     public DomainStudentModel getStudent() {
         return new DomainStudentModel(DomainUserInfo.builder().loginInfo(LoginInformation.builder()
-                        .emailAddress("ah@gmail.com")
+                        .email("ah@gmail.com")
                         .password("321")
                         .build())
                 .sex(Gender.WOMAN)
