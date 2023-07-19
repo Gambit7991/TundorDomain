@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @ToString(includeFieldNames = false)
-public class LoginInformation {
+public class LoginInfo {
     private int id;
     private String email;
     private String password;

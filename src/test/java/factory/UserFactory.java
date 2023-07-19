@@ -4,7 +4,7 @@ import org.domain.models.userRoles.StudentModel;
 import org.domain.models.userRoles.TutorModel;
 import org.domain.models.userRoles.accountInformation.UserInfo;
 import org.domain.models.userRoles.accountInformation.Gender;
-import org.domain.models.userRoles.accountInformation.LoginInformation;
+import org.domain.models.userRoles.accountInformation.LoginInfo;
 import org.domain.models.userRoles.supportClasses.address.Address;
 import org.joda.time.DateTime;
 
@@ -15,7 +15,7 @@ public class UserFactory {
 
     public TutorModel getTutor() {
         return new TutorModel(UserInfo.builder()
-                .loginInfo(LoginInformation.builder()
+                .loginInfo(LoginInfo.builder()
                         .email("ha@gmail.com")
                         .password("123")
                         .build())
@@ -36,7 +36,7 @@ public class UserFactory {
     }
 
     public StudentModel getStudent() {
-        return new StudentModel(UserInfo.builder().loginInfo(LoginInformation.builder()
+        return new StudentModel(UserInfo.builder().loginInfo(LoginInfo.builder()
                         .email("ah@gmail.com")
                         .password("321")
                         .build())

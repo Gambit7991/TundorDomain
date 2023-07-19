@@ -17,7 +17,7 @@ import java.util.UUID;
 @ToString(includeFieldNames = false)
 public class UserInfo {
     private UUID id;
-    private LoginInformation loginInfo;
+    private LoginInfo loginInfo;
     private Timestamp createdTime;
     private Timestamp birthday;
     private String firstName;
