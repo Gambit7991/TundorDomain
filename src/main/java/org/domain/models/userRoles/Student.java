@@ -11,6 +11,7 @@ import java.util.UUID;
 @EqualsAndHashCode(callSuper = false)
 public class Student extends User {
 //    private final List <DomainTutorModel> domainTutorModels = new ArrayList<>();
+    @Builder
     public Student(UserInfo userInfo, UUID id) {
         super(userInfo, id);
     }

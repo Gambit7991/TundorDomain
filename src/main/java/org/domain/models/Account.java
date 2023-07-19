@@ -1,9 +1,6 @@
 package org.domain.models;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.domain.models.userRoles.accountInformation.UserInfo;
 
 import java.util.UUID;
@@ -12,6 +9,7 @@ import java.util.UUID;
 @Setter
 @ToString(includeFieldNames = false)
 @EqualsAndHashCode
+@Builder
 public abstract class Account {
     private UUID id;
     private UserInfo info;
