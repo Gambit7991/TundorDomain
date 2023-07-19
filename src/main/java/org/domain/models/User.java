@@ -12,7 +12,7 @@ import java.util.UUID;
 public abstract class User extends Account {
 
     public User(UserInfo userInfo, UUID id) {
-        super(userInfo, id);
+        super(id, userInfo);
     }
 
 
