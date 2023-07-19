@@ -1,14 +1,19 @@
 package org.domain.models.userRoles;
 
-import lombok.Builder;
+import lombok.*;
 import org.domain.models.Account;
 import org.domain.models.userRoles.accountInformation.UserInfo;
 
 import java.util.UUID;
 
+@Builder
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Admin extends Account {
 
-    @Builder
+
     public Admin(UserInfo userInfo, UUID id) {
         super(userInfo, id);
     }
