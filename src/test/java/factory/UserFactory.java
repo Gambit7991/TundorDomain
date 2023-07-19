@@ -1,8 +1,8 @@
 package factory;
 
-import org.domain.models.userRoles.DomainStudentModel;
-import org.domain.models.userRoles.DomainTutorModel;
-import org.domain.models.userRoles.accountInformation.DomainUserInfo;
+import org.domain.models.userRoles.StudentModel;
+import org.domain.models.userRoles.TutorModel;
+import org.domain.models.userRoles.accountInformation.UserInfo;
 import org.domain.models.userRoles.accountInformation.Gender;
 import org.domain.models.userRoles.accountInformation.LoginInformation;
 import org.domain.models.userRoles.supportClasses.address.Address;
@@ -13,8 +13,8 @@ import java.util.UUID;
 
 public class UserFactory {
 
-    public DomainTutorModel getTutor() {
-        return new DomainTutorModel(DomainUserInfo.builder()
+    public TutorModel getTutor() {
+        return new TutorModel(UserInfo.builder()
                 .loginInfo(LoginInformation.builder()
                         .email("ha@gmail.com")
                         .password("123")
@@ -35,8 +35,8 @@ public class UserFactory {
                 UUID.randomUUID());
     }
 
-    public DomainStudentModel getStudent() {
-        return new DomainStudentModel(DomainUserInfo.builder().loginInfo(LoginInformation.builder()
+    public StudentModel getStudent() {
+        return new StudentModel(UserInfo.builder().loginInfo(LoginInformation.builder()
                         .email("ah@gmail.com")
                         .password("321")
                         .build())

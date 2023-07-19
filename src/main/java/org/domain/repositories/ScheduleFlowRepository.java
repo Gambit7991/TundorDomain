@@ -1,14 +1,14 @@
 package org.domain.repositories;
 
-import org.domain.models.DomainUserModel;
-import org.domain.models.userRoles.DomainStudentModel;
-import org.domain.models.userRoles.DomainTutorModel;
+import org.domain.models.UserModel;
+import org.domain.models.userRoles.StudentModel;
+import org.domain.models.userRoles.TutorModel;
 import org.joda.time.Interval;
 
 public interface ScheduleFlowRepository {
-    boolean isIntervalAvailable(DomainTutorModel domainTutorModel, DomainStudentModel domainStudentModel, Interval interval);
+    boolean isIntervalAvailable(TutorModel domainTutorModel, StudentModel domainStudentModel, Interval interval);
 
-    boolean isIntervalAvailable(DomainUserModel domainUserModel, Interval interval);
+    boolean isIntervalAvailable(UserModel userModel, Interval interval);
 
-    ScheduleFlowRepository setSchedule(DomainTutorModel domainTutorModel, DomainStudentModel domainStudentModel, Interval interval);
+    ScheduleFlowRepository setSchedule(TutorModel domainTutorModel, StudentModel domainStudentModel, Interval interval);
 }

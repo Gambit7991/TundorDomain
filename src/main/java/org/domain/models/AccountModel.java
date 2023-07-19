@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.domain.models.userRoles.accountInformation.DomainUserInfo;
+import org.domain.models.userRoles.accountInformation.UserInfo;
 
 import java.util.UUID;
 
@@ -12,11 +12,11 @@ import java.util.UUID;
 @Setter
 @ToString(includeFieldNames = false)
 @EqualsAndHashCode
-public abstract class DomainAccountModel {
+public abstract class AccountModel {
     private UUID id;
-    private DomainUserInfo info;
+    private UserInfo info;
 
-    public DomainAccountModel(DomainUserInfo info, UUID id) {
+    public AccountModel(UserInfo info, UUID id) {
         this.info = info;
         this.id = id;
     }

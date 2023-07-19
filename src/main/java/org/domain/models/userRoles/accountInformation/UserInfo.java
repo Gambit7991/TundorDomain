@@ -1,7 +1,7 @@
 package org.domain.models.userRoles.accountInformation;
 
 import lombok.*;
-import org.domain.models.DomainUserModel;
+import org.domain.models.UserModel;
 import org.domain.models.userRoles.supportClasses.address.Address;
 import org.joda.time.Interval;
 
@@ -15,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(includeFieldNames = false)
-public class DomainUserInfo {
+public class UserInfo {
     private UUID id;
     private LoginInformation loginInfo;
     private Timestamp createdTime;
@@ -30,8 +30,8 @@ public class DomainUserInfo {
     private final Schedule schedule = new Schedule();
     private ArrayList<BankCard> bankCards = new ArrayList<>();
 
-    public Interval getSchedule(DomainUserModel domainUserModel){
-        return schedule.getSchedules().get(domainUserModel);
+    public Interval getSchedule(UserModel userModel){
+        return schedule.getSchedules().get(userModel);
     }
 
     public void addCard(BankCard bankCard) {
