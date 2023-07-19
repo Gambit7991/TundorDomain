@@ -1,7 +1,7 @@
 package org.domain.models.userRoles;
 
 import lombok.*;
-import org.domain.models.UserModel;
+import org.domain.models.User;
 import org.domain.models.userRoles.accountInformation.UserInfo;
 
 import java.util.UUID;
@@ -9,9 +9,9 @@ import java.util.UUID;
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = false)
-public class StudentModel extends UserModel {
+public class Student extends User {
 //    private final List <DomainTutorModel> domainTutorModels = new ArrayList<>();
-    public StudentModel(UserInfo userInfo, UUID id) {
+    public Student(UserInfo userInfo, UUID id) {
         super(userInfo, id);
     }
 

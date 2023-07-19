@@ -12,11 +12,11 @@ import java.util.UUID;
 @Setter
 @ToString(includeFieldNames = false)
 @EqualsAndHashCode
-public abstract class AccountModel {
+public abstract class Account {
     private UUID id;
     private UserInfo info;
 
-    public AccountModel(UserInfo info, UUID id) {
+    public Account(UserInfo info, UUID id) {
         this.info = info;
         this.id = id;
     }

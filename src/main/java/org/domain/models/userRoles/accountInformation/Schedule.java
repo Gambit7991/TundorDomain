@@ -1,7 +1,7 @@
 package org.domain.models.userRoles.accountInformation;
 
 import lombok.*;
-import org.domain.models.UserModel;
+import org.domain.models.User;
 import org.domain.models.userRoles.supportClasses.DayOfWeek;
 import org.joda.time.Interval;
 
@@ -16,10 +16,10 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 public class Schedule {
-    private final HashMap<UserModel, Interval> schedules = new HashMap<>();
+    private final HashMap<User, Interval> schedules = new HashMap<>();
     private final HashMap<DayOfWeek, ArrayList<Interval>> inappropriateTime = new HashMap<>();
 
-    public boolean addSchedule(UserModel userModel, Interval interval){
+    public boolean addSchedule(User userModel, Interval interval){
         return schedules.put(userModel, interval) != null;
     }
 

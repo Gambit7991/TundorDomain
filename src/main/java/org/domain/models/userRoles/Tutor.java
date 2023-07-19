@@ -2,7 +2,7 @@ package org.domain.models.userRoles;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import org.domain.models.UserModel;
+import org.domain.models.User;
 import org.domain.models.userRoles.accountInformation.UserInfo;
 
 import java.util.ArrayList;
@@ -11,18 +11,18 @@ import java.util.UUID;
 
 @Getter
 @EqualsAndHashCode(callSuper = false)
-public class TutorModel extends UserModel {
-    private final List<StudentModel> domainStudentModels = new ArrayList<>();
+public class Tutor extends User {
+    private final List<Student> domainStudentModels = new ArrayList<>();
 
-    public TutorModel(UserInfo userInfo, UUID id) {
+    public Tutor(UserInfo userInfo, UUID id) {
         super(userInfo, id);
     }
 
-    public void addStudent(StudentModel domainStudentModel) {
+    public void addStudent(Student domainStudentModel) {
         domainStudentModels.add(domainStudentModel);
     }
 
-    public void removeStudent(StudentModel domainStudentModel) {
+    public void removeStudent(Student domainStudentModel) {
         domainStudentModels.remove(domainStudentModel);
     }
 
@@ -43,7 +43,7 @@ public class TutorModel extends UserModel {
     }
     private String studentsInformation(){
         StringBuilder information = new StringBuilder();
-        for (StudentModel a: domainStudentModels) {
+        for (Student a: domainStudentModels) {
             information.append(a.customToString());
         };
         return information.toString();

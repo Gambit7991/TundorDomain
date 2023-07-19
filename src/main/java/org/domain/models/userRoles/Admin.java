@@ -1,13 +1,13 @@
 package org.domain.models.userRoles;
 
-import org.domain.models.AccountModel;
+import org.domain.models.Account;
 import org.domain.models.userRoles.accountInformation.UserInfo;
 
 import java.util.UUID;
 
-public class AdminModel extends AccountModel {
+public class Admin extends Account {
 
-    public AdminModel(UserInfo userInfo, UUID id) {
+    public Admin(UserInfo userInfo, UUID id) {
         super(userInfo, id);
     }
 }

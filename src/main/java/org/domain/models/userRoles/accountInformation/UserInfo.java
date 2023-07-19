@@ -1,7 +1,7 @@
 package org.domain.models.userRoles.accountInformation;
 
 import lombok.*;
-import org.domain.models.UserModel;
+import org.domain.models.User;
 import org.domain.models.userRoles.supportClasses.address.Address;
 import org.joda.time.Interval;
 
@@ -30,7 +30,7 @@ public class UserInfo {
     private final Schedule schedule = new Schedule();
     private ArrayList<BankCard> bankCards = new ArrayList<>();
 
-    public Interval getSchedule(UserModel userModel){
+    public Interval getSchedule(User userModel){
         return schedule.getSchedules().get(userModel);
     }
 

@@ -9,9 +9,9 @@ import java.util.UUID;
 
 @Getter
 @Setter
-public abstract class UserModel extends AccountModel {
+public abstract class User extends Account {
 
-    public UserModel(UserInfo userInfo, UUID id) {
+    public User(UserInfo userInfo, UUID id) {
         super(userInfo, id);
     }
 
