@@ -16,8 +16,8 @@ public class Tutor extends User {
     private final List<Student> domainStudentModels = new ArrayList<>();
 
     @Builder
-    public Tutor(UserInfo userInfo, UUID id) {
-        super(userInfo, id);
+    public Tutor(UserInfo info, UUID id) {
+        super(info, id);
     }
 
     public void addStudent(Student domainStudentModel) {
