@@ -17,7 +17,7 @@ public class UserCreationTests {
 
     @Test
     public void builder(){
-        Student student = Student.builder().userInfo(userFactory.getStudent().getInfo()).build();
+        Student student = Student.builder().info(userFactory.getStudent().getInfo()).build();
         Assertions.assertNotNull(student);
     }
     @Test

@@ -10,8 +10,8 @@ import java.util.UUID;
 @Getter
 @Setter
 public abstract class User extends Account {
-    public User(UserInfo userInfo, UUID id) {
-        super(id, userInfo);
+    public User(UserInfo Info, UUID id) {
+        super(id, Info);
     }
 
 

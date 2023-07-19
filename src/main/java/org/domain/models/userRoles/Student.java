@@ -12,8 +12,8 @@ import java.util.UUID;
 public class Student extends User {
 //    private final List <DomainTutorModel> domainTutorModels = new ArrayList<>();
     @Builder
-    public Student(UserInfo userInfo, UUID id) {
-        super(userInfo, id);
+    public Student(UserInfo info, UUID id) {
+        super(info, id);
     }
 
 //    public void addTutor(DomainTutorModel domainTutorModel) {
