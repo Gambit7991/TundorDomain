@@ -11,7 +11,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @ToString(includeFieldNames = false)
 @EqualsAndHashCode
-@Builder
 public abstract class Account {
     private UUID id;
     private UserInfo info;
