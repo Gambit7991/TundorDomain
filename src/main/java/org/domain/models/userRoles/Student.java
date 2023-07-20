@@ -15,18 +15,18 @@ import java.util.UUID;
 @Setter
 @EqualsAndHashCode(callSuper = false)
 public class Student extends User {
-    private final List<Tutor> domainTutorModels = new ArrayList<>();
+    private final List<Tutor> tutors = new ArrayList<>();
     @Builder
     public Student(UserInfo info, UUID id) {
         super(info, id);
     }
 
     public void addTutor(Tutor tutor) {
-        domainTutorModels.add(tutor);
+        tutors.add(tutor);
     }
 //
     public void removeTutor(Tutor tutor) {
-        domainTutorModels.remove(tutor);
+        tutors.remove(tutor);
     }
 
 //    public List<DomainTutorModel> getDomainTutorModels(){
@@ -50,7 +50,7 @@ public class Student extends User {
 
     private String tutorsInformation(){
         StringBuilder information = new StringBuilder();
-        for (Tutor a: domainTutorModels) {
+        for (Tutor a: tutors) {
             information.append(a.customToString());
         };
         return information.toString();
