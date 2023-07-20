@@ -1,6 +1,5 @@
 package org.domain.models.userRoles;
 
-import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +14,7 @@ import java.util.UUID;
 public class Tutor extends User {
 //    private final List<Student> students = new ArrayList<>();
 
-    @Builder
+
     public Tutor(UserInfo info, UUID id) {
         super(info, id);
     }
